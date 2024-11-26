@@ -31,11 +31,11 @@ A web application to collect and analyze student feedback for faculty performanc
 ## Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/sujankc07/student-feedback-management.git
+git clone https://github.com/sujankc07/Student-Feedback-Management-System.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd student-feedback-management
+cd Student-Feedback-Management-System
 ```
 3.Install required Python packages:
 ```bash
