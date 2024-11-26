@@ -1,0 +1,4 @@
+SHOW PROCEDURE STATUS WHERE `Db` = 'student_feedback';
+
+
+DROP PROCEDURE IF EXISTS procedure_name;

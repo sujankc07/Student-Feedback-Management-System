@@ -1,0 +1,18 @@
+DELIMITER $$
+
+CREATE TRIGGER validate_feedback_ratings BEFORE INSERT ON feedback
+FOR EACH ROW
+BEGIN
+    IF NEW.Q1 < 1 OR NEW.Q1 > 5 OR
+       NEW.Q2 < 1 OR NEW.Q2 > 5 OR
+       NEW.Q3 < 1 OR NEW.Q3 > 5 OR
+       NEW.Q4 < 1 OR NEW.Q4 > 5 OR
+       NEW.Q5 < 1 OR NEW.Q5 > 5 THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Invalid rating! Ratings must be integers between 1 and 5.';
+    END IF;
+END$$
+
+DELIMITER ;
+
+
